@@ -1,0 +1,51 @@
+/* src/css/ViewBlogPost.css */
+
+.view-post-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .view-post-container h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .view-post-container p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+  .view-post-container i {
+    color: #5080c0;
+  }
+  
+  .view-post-container .like-count {
+    margin-top: 15px;
+    color: #333;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: left;
+    margin-top: 20px;
+  }
+  
+  .button-container button {
+    margin: 5px 20px;
+    padding: 10px 15px;
+    background-color: #5080c0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button-container button:hover {
+    background-color: #406ea8;
+  }
+  

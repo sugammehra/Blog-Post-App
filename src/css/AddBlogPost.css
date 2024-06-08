@@ -1,0 +1,49 @@
+/* src/components/AddPost.css */
+
+.add-post-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-post-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .add-post-container form div {
+    margin-bottom: 15px;
+  }
+  
+  .add-post-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #5080c0;
+  }
+  
+  .add-post-container input,
+  .add-post-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .add-post-container button {
+    padding: 10px 15px;
+    background-color: #5080c0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+  }
+  
+  .add-post-container button:hover {
+    background-color: #406ea8;
+  }
+  

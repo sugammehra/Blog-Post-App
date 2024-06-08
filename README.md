@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# React Blog Post Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React-based Blog Post application that allows users to add, view, edit, and delete blog posts. It also supports liking and unliking blog posts. The application uses Redux for state management to ensure a predictable and centralized state.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Home Page**: Displays a list of blog posts with options to view, edit, delete, and like/unlike each post.
+- **Add Blog Post**: Allows users to create a new blog post by providing a title, content, and author name.
+- **View Blog Post**: Displays the details of a selected blog post with options to go back or edit the post.
+- **Edit Blog Post**: Allows users to edit the details of an existing blog post.
+- **Delete Blog Post**: Allows users to delete a blog post.
+- **Like/Unlike Blog Post**: Allows users to like and unlike a blog post with a toggle button.
+- **Navbar**: Persistent navigation bar available on all pages.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- Redux
+- React Router
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+- `src/`
+  - `components/`
+    - `Home.js`: Displays the list of blog posts.
+    - `AddBlogPost.js`: Form to add a new blog post.
+    - `ViewBlogPost.js`: Displays the details of a selected blog post.
+    - `EditBlogPost.js`: Form to edit an existing blog post.
+    - `Navbar.js`: Navigation bar component.
+  - `css/`
+    - `Home.css`: Styles for the Home component.
+    - `AddBlogPost.css`: Styles for the AddBlogPost component.
+    - `ViewBlogPost.css`: Styles for the ViewBlogPost component.
+    - `EditBlogPost.css`: Styles for the EditBlogPost component.
+  - `store/`
+    - `Actions/`
+      - `blogActions.js`: Redux action creators for blog posts.
+    - `Reducers/`
+      - `blogReducer.js`: Redux reducer for blog posts.
+      - `index.js`: Combines all reducers.
+    - `store.js`: Redux store configuration.
+  - `context/`
+    - `BlogContext.js`: Conetxt action for adding new blog posts.
+  - `App.js`: Main application component.
+  - `index.js`: Entry point for the React application.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Redux Implementation
 
-### `npm run build`
+### Reducer (blogReducer.js)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Handles the following action types:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `ADD_BLOG_POST`
+- `EDIT_BLOG_POST`
+- `DELETE_BLOG_POST`
+- `LIKE_BLOG_POST`
+- `UNLIKE_BLOG_POST`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Store (store.js)
 
-### `npm run eject`
+Combines reducers and creates the Redux store with support for Redux DevTools.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Context Implementation
